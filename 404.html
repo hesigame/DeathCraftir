@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 | DeathCraft</title>
+
+    <link href="https://lib.arvancloud.ir/vazir-font/33.003/Farsi-Digits-Non-Latin/Vazirmatn-FD-NL-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://lib.arvancloud.ir/font-awesome/6.3.0/css/all.min.css">
+
+    <style>
+        :root {
+            --green: #55ff55;
+            --green-dark: #568a2e;
+            --dark: #0b0b0b;
+            --card: #181818;
+            --border: #303030;
+            --text: #ffffff;
+            --muted: #aaaaaa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.78),
+                    rgba(0, 0, 0, 0.9)
+                ),
+                url("https://images.unsplash.com/photo-1607988795628-9eee730e1b18?q=80&w=1920&auto=format&fit=crop");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: var(--text);
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ================= HEADER ================= */
+
+        header {
+            width: 100%;
+
+            background: rgba(0, 0, 0, 0.9);
+
+            backdrop-filter: blur(10px);
+
+            padding: 18px 35px;
+
+            border-bottom: 4px solid var(--green-dark);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: white;
+            text-decoration: none;
+
+            font-size: 1.8rem;
+            font-weight: 900;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            text-shadow: 3px 3px #000;
+        }
+
+        .logo i {
+            color: var(--green);
+
+            animation: float 2s infinite ease-in-out;
+        }
+
+        .home-link {
+            color: #ddd;
+            text-decoration: none;
+
+            font-weight: bold;
+
+            padding: 10px 16px;
+
+            border-radius: 7px;
+
+            transition: 0.3s;
+        }
+
+        .home-link:hover {
+            color: var(--green);
+            background: rgba(85, 255, 85, 0.08);
+        }
+
+        /* ================= MAIN ================= */
+
+        main {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 50px 20px;
+        }
+
+        .error-card {
+            width: 100%;
+            max-width: 700px;
+
+            background: rgba(18, 18, 18, 0.94);
+
+            border: 3px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 55px 35px;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.65);
+
+            animation: appear 0.6s ease;
+        }
+
+        /* ================= 404 ================= */
+
+        .error-number {
+            font-family: monospace;
+
+            font-size: clamp(6rem, 18vw, 11rem);
+
+            font-weight: 900;
+
+            line-height: 0.9;
+
+            color: var(--green);
+
+            text-shadow:
+                6px 6px 0 #000,
+                0 0 25px rgba(85, 255, 85, 0.25);
+
+            margin-bottom: 25px;
+        }
+
+        .error-icon {
+            font-size: 3rem;
+
+            color: #cf3e3e;
+
+            margin-bottom: 20px;
+
+            animation: wrench 2s infinite ease-in-out;
+        }
+
+        h1 {
+            font-size: 2rem;
+
+            margin-bottom: 15px;
+
+            color: white;
+        }
+
+        .description {
+            color: var(--muted);
+
+            font-size: 1.1rem;
+
+            line-height: 2;
+
+            max-width: 550px;
+
+            margin: 0 auto 30px;
+        }
+
+        /* ================= STATUS ================= */
+
+        .status {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            background: rgba(207, 62, 62, 0.1);
+
+            border: 1px solid #cf3e3e;
+
+            color: #ddd;
+
+            padding: 10px 18px;
+
+            border-radius: 8px;
+
+            margin-bottom: 30px;
+
+            font-size: 0.95rem;
+        }
+
+        .status-dot {
+            width: 9px;
+            height: 9px;
+
+            background: #cf3e3e;
+
+            border-radius: 50%;
+
+            box-shadow: 0 0 10px #cf3e3e;
+
+            animation: blink 1.5s infinite;
+        }
+
+        /* ================= BUTTON ================= */
+
+        .home-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            padding: 13px 25px;
+
+            background: var(--green-dark);
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            border: 2px solid #426d23;
+
+            font-weight: bold;
+
+            box-shadow:
+                inset 0 2px rgba(255,255,255,0.12),
+                0 5px 0 #31521b;
+
+            transition: 0.15s;
+        }
+
+        .home-button:hover {
+            background: #639d37;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                inset 0 2px rgba(255,255,255,0.12),
+                0 7px 0 #31521b;
+        }
+
+        .home-button:active {
+            transform: translateY(3px);
+
+            box-shadow:
+                inset 0 2px rgba(255,255,255,0.12),
+                0 2px 0 #31521b;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #080808;
+
+            border-top: 4px solid var(--green-dark);
+
+            padding: 22px;
+
+            text-align: center;
+
+            color: #777;
+
+            font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: var(--green);
+        }
+
+        /* ================= ANIMATIONS ================= */
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        @keyframes wrench {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-10deg);
+            }
+
+            50% {
+                transform: rotate(10deg);
+            }
+
+            75% {
+                transform: rotate(-5deg);
+            }
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.35;
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.98);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 15px 18px;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .home-link {
+                font-size: 0.9rem;
+            }
+
+            .error-card {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .description {
+                font-size: 0.95rem;
+            }
+
+            .error-number {
+                font-size: 7rem;
+            }
+        }
+    </style>
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
+
+<body class="inner">
+
+    <!-- HEADER -->
+
+    <div class="dc-bg"><i></i><i></i><i></i></div><div class="dc-top"><a href="index.html" class="dc-brand"><b><i class="fas fa-skull-crossbones"></i></b><span>DeathCraft</span></a>
+<ul class="dc-links" id="dc-menu"><li><a href="index.html"><i class="fas fa-house"></i>خانه</a></li><li><a href="404.html" class=on><i class="fas fa-cart-shopping"></i>فروشگاه</a></li><li><a href="rules.html"><i class="fas fa-book"></i>قوانین</a></li><li><a href="stats.html"><i class="fas fa-chart-line"></i>وضعیت</a></li><li><a href="info.html"><i class="fas fa-circle-info"></i>اطلاعات</a></li><li><a href="https://rubika.ir/DeathCraft" target="_blank" rel="noopener noreferrer"><i class="fas fa-comments"></i>روبیکا</a></li></ul>
+<div class="dc-act"><a href="404.html" class="btn pri sm"><i class="fas fa-user"></i>پنل کاربری</a><button class="dc-ic" id="dc-theme" aria-label="تغییر تم شب و روز"></button><button class="dc-ic dc-burger" id="dc-burger" aria-label="منو"><i class="fas fa-bars"></i></button></div></div>
+
+
+    <!-- ERROR -->
+
+    <main>
+
+        <div class="error-card">
+
+            <div class="error-number">
+                404
+            </div>
+
+            <div class="error-icon">
+                <i class="fas fa-screwdriver-wrench"></i>
+            </div>
+
+            <h1>
+                این قسمت به مشکل خورده
+            </h1>
+
+            <p class="description">
+                این بخش از DeathCraft در حال تعمیر یا بروزرسانی است.
+                لطفاً کمی بعد دوباره امتحان کنید.
+            </p>
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                این قسمت موقتاً در دسترس نیست
+
+            </div>
+
+            <br>
+
+            <a href="index.html" class="home-button">
+
+                <i class="fas fa-arrow-right"></i>
+
+                بازگشت به صفحه اصلی
+
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="dc-foot"><div class="wrap"><div class="fgrid">
+<div><a href="index.html" class="dc-brand"><b><i class="fas fa-skull-crossbones"></i></b>DeathCraft</a><p style="margin-top:14px">سرور ماینکرفت ایرانی با گیم‌مودهای SkyMine و Arcade؛ امنیت بالا، اقتصاد فعال و پشتیبانی ۲۴ ساعته.</p>
+<div class="soc"><a href="https://rubika.ir/DeathCraft" target="_blank" rel="noopener noreferrer" aria-label="روبیکا"><i class="fas fa-comments"></i></a><a href="https://www.aparat.com/DeathCraft" target="_blank" rel="noopener noreferrer" aria-label="آپارات"><i class="fas fa-play-circle"></i></a><a href="https://donofa.ir/Deathcraft" target="_blank" rel="noopener noreferrer" aria-label="حمایت"><i class="fas fa-heart"></i></a></div></div>
+<div><h5>لینک‌های مفید</h5><a href="index.html">صفحه اصلی</a><a href="404.html">فروشگاه</a><a href="rules.html">قوانین سرور</a><a href="stats.html">آمار سرور</a><a href="info.html">اطلاعات</a></div>
+<div><h5>اطلاعات سرور</h5><p>نسخه: 1.8.x - 26.x</p><p dir="ltr" style="text-align:right">Play.DeathCraft.IR</p><p>پلتفرم: Java</p></div>
+<div><h5>حمایت و رأی</h5><a href="https://mctracker.ir/servers/715" target="_blank" rel="noopener noreferrer"><img src="assets/images/mctracker-icon.png" alt="MCTracker" width="28" height="28" loading="lazy" style="border-radius:8px;vertical-align:middle"> رأی در MCTracker</a></div>
+</div><div class="fbot"><span>© 1405 DeathCraft Server. تمامی حقوق محفوظ است.</span><span><i class="fas fa-code"></i> ساخته‌شده با ❤ برای بازیکن‌های ایرانی</span></div></div></footer>
+<div id="dc-toast"><i class="fas fa-check-circle"></i> آی‌پی کپی شد!</div>
+
+<script src="assets/js/theme.js"></script>
+</body>
+</html>
