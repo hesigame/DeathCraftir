@@ -1,0 +1,21 @@
+# DeathCraft
+
+> DeathCraft is an Iranian, Persian-language Minecraft Java Edition server with the SkyMine and Arcade game modes.
+
+- Server address: Play.DeathCraft.IR
+- Game: Minecraft Java Edition, versions 1.8.x - 26.x
+- Game modes: SkyMine, Arcade
+- Language / region: Persian (fa-IR), Iran
+- Official website: https://deathcraft.ir/
+
+## Pages
+- [Home](https://deathcraft.ir/): overview, how to join, FAQ
+- [Rules](https://deathcraft.ir/rules/): chat, gameplay/PvP, trading rules and punishments
+- [Server status](https://deathcraft.ir/stats/): live online/offline status and player count
+- [About](https://deathcraft.ir/info/): official facts and links
+
+## Official links
+- Rubika: https://rubika.ir/DeathCraft
+- Aparat: https://www.aparat.com/DeathCraft
+- Minecraft-MP: https://minecraft-mp.com/server-s363769
+- MCTracker: https://mctracker.ir/servers/deathcraft
